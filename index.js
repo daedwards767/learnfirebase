@@ -1,14 +1,7 @@
 var db
 window.onload = function(){
 db = firebase.database().ref('applicants');
-
-console.log(db);
-
-db.once("value")
-  .then(function(snapshot) {
-    var applicant = snapshot.child("1").val();
-    console.log(applicant)
-  })
+db.once("value").then(getApplicants)
 }
 
 function addApplicant (){
@@ -29,6 +22,12 @@ function addApplicant (){
         console.warn("Error while adding applicant " + firstName + " " + lastName + "\n" + e)
     }
 }
+
+function getApplicants(snapshot){
+    var applicants = snapshot.val();
+    console.log(applicants)
+    return applicants
+} 
 
 function clearFields(){
     document.getElementById("firstName").value = null
