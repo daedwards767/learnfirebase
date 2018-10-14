@@ -1,0 +1,22 @@
+{
+  "name": "learn-firebase",
+  "version": "1.0.0",
+  "description": "learning firebase hands-on ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daedwards767/learnfirebase.git"
+  },
+  "author": "Davidson Edwards",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daedwards767/learnfirebase/issues"
+  },
+  "homepage": "https://github.com/daedwards767/learnfirebase#readme",
+  "dependencies": {
+    "firebase": "^5.5.4"
+  }
+}
