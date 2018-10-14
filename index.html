@@ -15,8 +15,38 @@
         firebase.initializeApp(config);
         </script>
         <script type="text/javascript" src="index.js"></script>
+        <style>
+            .textField, button {
+                padding: 0.5em 1em;
+                margin: 1em;
+                font-size: 0.8rem;
+            }
+            
+            .inputBox {
+                width: 50vw;
+                border: 1px solid #333;
+                min-width: 550px;
+                padding: 1em;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+            }
+
+            .inputBox > h3{
+                margin: 1em;
+            }
+        </style>
     </head>
     <body>
-        
+        <div class="inputBox">
+            <h3>Add Applicant</h3>
+            <form>
+                
+                <input id="firstName" type="text" placeholder="first name" class="textField" required>
+                <input id="lastName" type="text" placeholder="last name" class="textField" required>
+                <button type="button" onClick="addApplicant()" class="saveButton">save</button>
+            </form>
+        </div>
     </body>
 </html>
