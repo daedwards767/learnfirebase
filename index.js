@@ -1,7 +1,8 @@
 var db
 window.onload = function(){
 db = firebase.database().ref('applicants');
-db.once("value").then(getApplicants)
+db.once("value").then(displayApplicantTable)
+db.on("value").then(displayApplicantTable)
 }
 
 function addApplicant (){
@@ -23,6 +24,11 @@ function addApplicant (){
     }
 }
 
+function displayApplicantTable(snapshot){
+    console.log("triggering display")
+    var applicants = snapshot.val()
+    document.getElementById("applicantList").innerHTML = renderTable(Object.values(applicants))
+}
 function getApplicants(snapshot){
     var applicants = snapshot.val();
     console.log(applicants)

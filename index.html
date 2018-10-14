@@ -14,7 +14,6 @@
             };
         firebase.initializeApp(config);
         </script>
-        <script type="text/javascript" src="index.js"></script>
         <style>
             .textField, button {
                 padding: 0.5em 1em;
@@ -36,6 +35,23 @@
             .inputBox > h3{
                 margin: 1em;
             }
+
+            #applicantList table {
+                width: 50vw;
+                text-align: center;
+                margin: 1em;
+            }
+
+
+            #applicantList table, #applicantList tr, #applicantList td, #applicantList th {
+                border: 1px solid #333;
+                border-collapse: collapse;
+                padding: 1em;
+            }
+            
+            #applicantList td, #applicantList th {
+                text-transform: capitalize;
+            }
         </style>
     </head>
     <body>
@@ -48,5 +64,9 @@
                 <button type="button" onClick="addApplicant()" class="saveButton">save</button>
             </form>
         </div>
+        <div id="applicantList">
+        </div>
     </body>
+    <script type="text/javascript" src="display.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </html>
